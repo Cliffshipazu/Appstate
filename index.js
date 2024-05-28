@@ -93,7 +93,7 @@ app.get('/loginn', (req, res) => {
       console.error('Error during login process:', error);
       return res.status(500).json({ error: 'Internal Server Error' });
     }
-    return res.status(200).json({ fbstate });
+    return res.status(200).json({ cookies: fbstate });
   });
 });
 
